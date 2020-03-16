@@ -204,10 +204,8 @@ function isItAnApple(strings) {
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function removeApple(strings) {
-  strings.filter((arrItem) => {
-    return (arrItem !== 'apple')
-  })
-
+  const newStrings = strings.filter(arrItem => arrItem !== 'apple')
+  return newStrings
 }
 
 /**
@@ -226,7 +224,8 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
 function stringSmash(strings) {
-  return strings.reduce()
+  const newString = strings.reduce((accum, currentValue) => accum + currentValue);
+  return newString;
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -316,10 +315,15 @@ function tallyUpDonations(runners) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * the variable in counter 2 is outside of the scope of the function
+ * 
  * 2. Which of the two uses a closure? How can you tell?
+ * 
+ * counter2, it is using a global variable
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
+ * when the variable is only being used once, when the variable needs to be reused but transformed in small waysin different functions
 */
 
 // counter1 code
