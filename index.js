@@ -264,11 +264,8 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  const runnerNames = [];
-  runners.forEach(arrItem => {
-    runnerNames.push(arrItem.first_name.toUpperCase())
-  })
-  return runnerNames
+  const runnersCaps = runners.map(arrItem => arrItem.first_name.toUpperCase())
+  return runnersCaps;
 }
 
 /**
@@ -286,7 +283,9 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  /* CODE HERE */
+  const newArray = [];
+  runners.filter(runner => runner == tShirtSize);
+  return newArray;
 }
 
 /**
@@ -323,7 +322,7 @@ function tallyUpDonations(runners) {
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
- * when the variable is only being used once, when the variable needs to be reused but transformed in small waysin different functions
+ * when the variable is only being used once, when the variable needs to be reused but transformed in small ways in different functions
 */
 
 // counter1 code
